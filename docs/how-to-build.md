@@ -90,5 +90,5 @@
     $ sudo resize2fs /dev/sdX2
     ```
 
-    If you are running on an OS such as RHEL7.x, CENTOS 7.x or UBUNTU 16.x which does not include gcc v6 or higher, you must add the Yocto buildtools-extended configuration option.
+    If you are running on an OS whose e2fsprogs package is v1.42 or earlier (e.g. CENTOS 7.x), the resize2fs command will not work.  Consider downloading and building e2fsprogs v1.43 from source.
 
