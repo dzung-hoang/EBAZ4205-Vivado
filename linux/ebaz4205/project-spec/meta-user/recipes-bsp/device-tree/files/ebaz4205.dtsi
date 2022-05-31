@@ -8,6 +8,10 @@
         nand0 = &nand0;
     };
 
+    /* The LEDs are connected through the PL to the PS's EMIO GPIOs 0 and 1.
+       They therefore appear as GPIOs 54 and 55 here. The FPGA ports drive
+       the cathode of the LEDs (The anode is connected to VCC through a
+       150 ohm resistor.) so the GPIOs must be configured as active-low.    */
     gpio-leds {
         compatible = "gpio-leds";
 
@@ -25,6 +29,7 @@
         };
     };
 
+    /* The switches are connected to MIO GPIOs 20 and 32. */
     gpio-keys {
         compatible = "gpio-keys";
         autorepeat;
