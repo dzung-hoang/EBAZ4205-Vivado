@@ -24,7 +24,7 @@
 #    (Please see the '$orig_proj_dir' and '$origin_dir' variable setting below at the start of the script)
 #
 #    "EBAZ4205/vivado/ebaz4205/ebaz4205.srcs/sources_1/imports/hdl/open_drain.v"
-#    "EBAZ4205/vivado/ebaz4205/ebaz4205.srcs/constrs_1/imports/new/ebaz4205.xdc"
+#    "EBAZ4205/vivado/ebaz4205/ebaz4205.srcs/constrs_1/new/ebaz4205.xdc"
 #
 # 3. The following remote source files that were added to the original project:-
 #
@@ -37,7 +37,7 @@ proc checkRequiredFiles { origin_dir} {
   set status true
   set files [list \
  "[file normalize "$origin_dir/ebaz4205/ebaz4205.srcs/sources_1/imports/hdl/open_drain.v"]"\
- "[file normalize "$origin_dir/ebaz4205/ebaz4205.srcs/constrs_1/imports/new/ebaz4205.xdc"]"\
+ "[file normalize "$origin_dir/ebaz4205/ebaz4205.srcs/constrs_1/new/ebaz4205.xdc"]"\
   ]
   foreach ifile $files {
     if { ![file isfile $ifile] } {
@@ -185,7 +185,7 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize ${origin_dir}/ebaz4205/ebaz4205.srcs/constrs_1/imports/new/ebaz4205.xdc]"
+set file "[file normalize ${origin_dir}/ebaz4205/ebaz4205.srcs/constrs_1/new/ebaz4205.xdc]"
 set file_imported [import_files -fileset constrs_1 [list $file]]
 set file "new/ebaz4205.xdc"
 set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
@@ -193,9 +193,9 @@ set_property -name "file_type" -value "XDC" -objects $file_obj
 
 # Set 'constrs_1' fileset properties
 set obj [get_filesets constrs_1]
-set_property -name "target_constrs_file" -value "$proj_dir/${_xil_proj_name_}.srcs/constrs_1/imports/new/ebaz4205.xdc" -objects $obj
+set_property -name "target_constrs_file" -value "[get_files *new/ebaz4205.xdc]" -objects $obj
 set_property -name "target_part" -value "xc7z010clg400-1" -objects $obj
-set_property -name "target_ucf" -value "$proj_dir/${_xil_proj_name_}.srcs/constrs_1/imports/new/ebaz4205.xdc" -objects $obj
+set_property -name "target_ucf" -value "[get_files *new/ebaz4205.xdc]" -objects $obj
 
 # Create 'sim_1' fileset (if not found)
 if {[string equal [get_filesets -quiet sim_1] ""]} {
