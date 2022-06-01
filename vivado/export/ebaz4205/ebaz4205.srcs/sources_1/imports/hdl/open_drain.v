@@ -32,7 +32,7 @@ module open_drain
          OBUFT OBUFT_inst (
             .O(ODout[i]),
             .I(1'd0),
-            .T(!Din[i])
+            .T(Din[i])
          );
       end
    endgenerate
