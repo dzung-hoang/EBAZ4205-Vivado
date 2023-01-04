@@ -1,6 +1,6 @@
 PETALINUX_VER=2022.2
 VALIDATE_HW_CHKSUM=1
-HARDWARE_PATH=/media/win10/Users/steedman/Documents/EBAZ4205/Vivado_Projects/Wavelet2-EBAZ4205/vivado/ebaz4205/ebaz4205_wrapper.xsa
+HARDWARE_PATH=/data/vitis_v2022.2/ebax4205/vivado/ebaz4205/ebaz4205_wrapper.xsa
 HDF_EXT=xsa
 HARDWARE_CHECKSUM=c05b501bacb70f1533d1703a0716daf3
 YOCTO_SDK=85e32bd84b2647e640a2e565ef06077a
