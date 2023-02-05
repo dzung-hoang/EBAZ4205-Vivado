@@ -23,8 +23,8 @@
 # 2. The following source(s) files that were local or imported into the original project.
 #    (Please see the '$orig_proj_dir' and '$origin_dir' variable setting below at the start of the script)
 #
-#    "EBAZ4205/vivado/ebaz4205/ebaz4205.srcs/sources_1/imports/hdl/open_drain.v"
-#    "EBAZ4205/vivado/ebaz4205/ebaz4205.srcs/constrs_1/new/ebaz4205.xdc"
+#    "EBAZ4205/vivado/export/ebaz4205/ebaz4205.srcs/sources_1/imports/hdl/open_drain.v"
+#    "EBAZ4205/vivado/export/ebaz4205/ebaz4205.srcs/constrs_1/new/ebaz4205.xdc"
 #
 # 3. The following remote source files that were added to the original project:-
 #
@@ -222,7 +222,7 @@ set obj [get_filesets utils_1]
 
 # Adding sources referenced in BDs, if not already added
 if { [get_files open_drain.v] == "" } {
-  import_files -quiet -fileset sources_1 /FedoraDisk/home/steedman/EBAZ4205/vivado/ebaz4205/ebaz4205.srcs/sources_1/imports/hdl/open_drain.v
+  import_files -quiet -fileset sources_1 EBAZ4205/vivado/ebaz4205/ebaz4205.srcs/sources_1/imports/hdl/open_drain.v
 }
 
 
@@ -498,7 +498,7 @@ proc cr_bd_ebaz4205 { parentCell } {
    CONFIG.PCW_MIO_1_SLEW {slow} \
    CONFIG.PCW_MIO_20_DIRECTION {inout} \
    CONFIG.PCW_MIO_20_IOTYPE {LVCMOS 3.3V} \
-   CONFIG.PCW_MIO_20_PULLUP {enabled} \
+   CONFIG.PCW_MIO_20_PULLUP {disabled} \
    CONFIG.PCW_MIO_20_SLEW {slow} \
    CONFIG.PCW_MIO_21_DIRECTION {inout} \
    CONFIG.PCW_MIO_21_IOTYPE {LVCMOS 3.3V} \
@@ -550,7 +550,7 @@ proc cr_bd_ebaz4205 { parentCell } {
    CONFIG.PCW_MIO_31_SLEW {slow} \
    CONFIG.PCW_MIO_32_DIRECTION {inout} \
    CONFIG.PCW_MIO_32_IOTYPE {LVCMOS 3.3V} \
-   CONFIG.PCW_MIO_32_PULLUP {enabled} \
+   CONFIG.PCW_MIO_32_PULLUP {disabled} \
    CONFIG.PCW_MIO_32_SLEW {slow} \
    CONFIG.PCW_MIO_33_DIRECTION {inout} \
    CONFIG.PCW_MIO_33_IOTYPE {LVCMOS 3.3V} \

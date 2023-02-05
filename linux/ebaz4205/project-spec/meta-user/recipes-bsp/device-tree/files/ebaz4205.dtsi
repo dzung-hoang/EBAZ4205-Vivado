@@ -29,21 +29,25 @@
         };
     };
 
-    /* The switches are connected to MIO GPIOs 20 and 32. */
+    /* The switches are connected to MIO GPIOs 20 and 32.
+       S2 generates keycode KEY_HOME (102).
+       S3 generates keycode KEY_POWER (116).
+       The switches send 3.3V to the GPIO when depressed
+       so the GPIOs must be configured as active high.   */
     gpio-keys {
         compatible = "gpio-keys";
         autorepeat;
 
         s2 {
             label = "s2";
-            gpios = <&gpio0 20 1>;
+            gpios = <&gpio0 20 0>;
             linux,code = <102>;
             wakeup-source;
         };
 
         s3 {
             label = "s3";
-            gpios = <&gpio0 32 1>;
+            gpios = <&gpio0 32 0>;
             linux,code = <116>;
             wakeup-source;
         };

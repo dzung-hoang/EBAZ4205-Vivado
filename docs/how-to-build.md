@@ -30,7 +30,7 @@
 
     ```console
     $ # Change to the petalinux project directory
-    $ cd ./linux/ebaz4205
+    $ cd ../linux/ebaz4205
     $ # Specify the directory where you exported the XSA file
     $ # Exit the configuration without any changes
     $ petalinux-config --get-hw-description=../../vivado/ebaz4205
@@ -48,7 +48,7 @@
 
     ```console
     $ # Change to the petalinux project directory
-    $ cd ./linux/ebaz4205
+    $ cd ../linux/ebaz4205
     $ # Build
     $ petalinux-build
     $ # Make BOOT.BIN
