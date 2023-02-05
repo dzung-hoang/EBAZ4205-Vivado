@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains v2021.1 Vivado and PetaLinux projects for the Zynq EBAZ4205 board.  It is based on the EBAZ4205 git repository by KeitetsuWorks, updated for v2021.1 of the Xilinx tools.  The default build of PetaLinux in this repository includes the package management tools so that additional components may be installed with the dnf command after booting.
+This repository contains v2021.1 Vivado and PetaLinux projects for the Zynq EBAZ4205 board.  It is based on the EBAZ4205 git repository by KeitetsuWorks, updated for v2021.1 of the Xilinx tools and with fixes for the operation of the tactile switches S2 and S3.  The default build of PetaLinux in this repository includes the package management tools so that additional components may be installed with the dnf command after booting.
 
 
 ## Requirement
