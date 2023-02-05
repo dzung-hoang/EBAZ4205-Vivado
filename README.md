@@ -14,7 +14,7 @@ This repository contains v2021.1 Vivado and PetaLinux projects for the Zynq EBAZ
   * microSD card slot (U7) required
   * SD card boot support is required. Short the resistor (R2577)
   * Short the diode (D24) to supply power from the power connector (J4) (Optional)
-  * Mount the tactile switch (S3), the capacitor (C2410) and the resistor (R2641A) (Optional).
+  * Mount the tactile switch (S3), the capacitor (C2410) and the resistor (R2649) (Optional).
 
 
 ### Software
